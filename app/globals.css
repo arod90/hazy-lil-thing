@@ -2742,3 +2742,11 @@ footer {
     transform: none !important;
   }
 }
+
+/* iOS/Android safe areas (island / notch / gesture bar) — additive, no-op at inset 0 */
+@supports(padding:env(safe-area-inset-top)){
+  nav.bar{padding-top:env(safe-area-inset-top,0px)}
+  footer{padding-bottom:calc(40px + env(safe-area-inset-bottom,0px))}
+  .mm-close{top:calc(16px + env(safe-area-inset-top,0px))}
+  .drawer-foot{padding-bottom:calc(22px + env(safe-area-inset-bottom,0px))}
+}
