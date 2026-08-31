@@ -6,6 +6,7 @@ import Nav from "@/components/Nav";
 import CartDrawer from "@/components/CartDrawer";
 import Intro from "@/components/Intro";
 import ScrollReveal from "@/components/ScrollReveal";
+import { Analytics } from "@vercel/analytics/next";
 
 const head = Anton({
   subsets: ["latin"],
@@ -52,6 +53,7 @@ export default function RootLayout({
           <CartDrawer />
         </CartProvider>
         <ScrollReveal />
+        <Analytics />
       </body>
     </html>
   );
